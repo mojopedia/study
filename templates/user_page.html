@@ -1,9 +1,7 @@
-<html>
-<head>
-	<title>Django Bookmark - User: {{username}}</title>
-</head>
-<body>
-	<h1>{{username}}'s Bookmark</h1>
+{% extends "base.html" %}
+{% block title %}{{ username }}{% endblock %}
+{% block head %}{{username}}'s Bookmark{% endblock %}
+{% block content %}
 	{% if bookmarks %}
 		<ul>
 			{% for bookmark in bookmarks %}
@@ -14,5 +12,4 @@
 	{% else %}
 		<p>No Bookmark</p>
 	{% endif %}
-</body>
-</html>
+{% endblock %}

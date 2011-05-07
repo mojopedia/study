@@ -1,9 +1,7 @@
-<html>
-<head>
-	<title>Django Bookmark</title>
-</head>
-<body>
-	<h1>Welcome to Django Bookmark</h1>
+{% extends "base.html" %}
+{% block title %}Welcome to Django Bookmark{% endblock %}
+{% block head %}Welcome to Django Bookmark{% endblock %}
+{% block content %}
 	{% if user.username %}
 		<p>Hello, {{user.username}}!
 			Here you can store and share bookmarks!</p>
@@ -11,5 +9,4 @@
 	<p>Hello!
 		Please <a href="/login/">login</a> before store and share bookmarks</p>
 	{% endif %}
-</body>
-</html>
+{% endblock %}
